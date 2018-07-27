@@ -72,7 +72,7 @@
       @include nb-rtl(border, none);
     }
 
-    .header-container /deep/ ngx-CBView-switcher .dropdown-toggle {
+    .header-container /deep/ ngx-cbview-switcher .dropdown-toggle {
       color: nb-theme(color-white);
       background: transparent;
     }
@@ -82,7 +82,7 @@
     margin: 0 1.5rem;
   }
 
-  ngx-CBView-switcher {
+  ngx-cbview-switcher {
     margin: nb-theme(layout-padding);
     margin-top: 0;
     margin-bottom: 0;
@@ -171,7 +171,7 @@
       display: none;
     }
 
-    ngx-CBView-switcher {
+    ngx-cbview-switcher {
       margin: 0 0.5rem;
     }
   }
@@ -195,7 +195,7 @@
       display: none;
     }
 
-    ngx-CBView-switcher {
+    ngx-cbview-switcher {
       display: none;
     }
 

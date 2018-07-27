@@ -52,7 +52,7 @@ const routes: Routes = [{
     path: 'tab2',
     component: Tab2Component,
   }],
-}]
+}],
 }];
 
 @NgModule({
