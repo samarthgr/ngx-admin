@@ -1,46 +1,44 @@
 export const DEFAULT_THEME = {
   name: 'default',
-  base: null,
+  base: 'null',
   variables: {
-
-    // Safari fix
     temperature: [
-      '#42db7d',
-      '#42db7d',
-      '#42db7d',
-      '#42db7d',
-      '#42db7d',
+      '#ffa36b',
+      '#ffa36b',
+      '#ff9e7a',
+      '#ff9888',
+      '#ff8ea0',
     ],
 
     solar: {
-      gradientLeft: '#42db7d',
-      gradientRight: '#42db7d',
+      gradientLeft: '#ff8ea0',
+      gradientRight: '#ffa36b',
       shadowColor: 'rgba(0, 0, 0, 0)',
       radius: ['80%', '90%'],
     },
 
     traffic: {
       colorBlack: '#000000',
-      tooltipBg: '#ffffff',
-      tooltipBorderColor: '#c0c8d1',
+      tooltipBg: '#eef2f5',
+      tooltipBorderColor: '#eef2f5',
       tooltipExtraCss: 'border-radius: 10px; padding: 4px 16px;',
       tooltipTextColor: '#2a2a2a',
-      tooltipFontWeight: 'bolder',
+      tooltipFontWeight: '400',
 
       lineBg: '#c0c8d1',
-      lineShadowBlur: '1',
+      lineShadowBlur: '0',
       itemColor: '#bcc3cc',
       itemBorderColor: '#bcc3cc',
-      itemEmphasisBorderColor: '#42db7d',
+      itemEmphasisBorderColor: '#74a2ff',
       shadowLineDarkBg: 'rgba(0, 0, 0, 0)',
       shadowLineShadow: 'rgba(0, 0, 0, 0)',
-      gradFrom: '#ebeef2',
-      gradTo: '#ebeef2',
+      gradFrom: '#ffffff',
+      gradTo: '#ffffff',
     },
 
     electricity: {
-      tooltipBg: '#ffffff',
-      tooltipLineColor: 'rgba(0, 0, 0, 0)',
+      tooltipBg: '#edf0f4',
+      tooltipLineColor: '#bdc4cd',
       tooltipLineWidth: '0',
       tooltipBorderColor: '#ebeef2',
       tooltipExtraCss: 'border-radius: 10px; padding: 8px 24px;',
@@ -51,16 +49,16 @@ export const DEFAULT_THEME = {
       xAxisTextColor: '#2a2a2a',
       yAxisSplitLine: '#ebeef2',
 
-      itemBorderColor: '#42db7d',
+      itemBorderColor: '#73a1ff',
       lineStyle: 'solid',
       lineWidth: '4',
-      lineGradFrom: '#42db7d',
-      lineGradTo: '#42db7d',
+      lineGradFrom: '#bdc4cd',
+      lineGradTo: '#c0c8d1',
       lineShadow: 'rgba(0, 0, 0, 0)',
 
-      areaGradFrom: 'rgba(235, 238, 242, 0.5)',
-      areaGradTo: 'rgba(235, 238, 242, 0.5)',
-      shadowLineDarkBg: 'rgba(0, 0, 0, 0)',
+      areaGradFrom: 'rgba(255, 255, 255, 0)',
+      areaGradTo: 'rgba(255, 255, 255, 0)',
+      shadowLineDarkBg: 'rgba(255, 255, 255, 0)',
     },
 
     bubbleMap: {
