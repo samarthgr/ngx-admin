@@ -14,7 +14,9 @@ const routes: Routes = [{
     component: DashboardComponent,
   }, {
     path: 'codebase',
+
     component: CodebaseComponent,
+
   }, {
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',

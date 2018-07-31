@@ -8,6 +8,25 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
+    title: 'Codebase',
+    icon: 'nb-keypad',
+    link: '/pages/codebase',
+    children: [
+      {
+        title: 'Flame6',
+        link: '/pages/codebase/flame6',
+      },
+      {
+        title: 'Flame7',
+        link: '/pages/codebase/flame7',
+      },
+      {
+        title: 'Flame8',
+        link: '/pages/codebase/flame8',
+      },
+    ],
+  },
+  {
     title: 'FEATURES',
     group: true,
   },
