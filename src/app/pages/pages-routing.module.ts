@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
+import { CodebaseComponent } from './codebase/codebase.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
 
@@ -13,7 +14,9 @@ const routes: Routes = [{
     component: DashboardComponent,
   }, {
     path: 'codebase',
-    loadChildren: './codebase/codebase.module#CodebaseModule',
+
+    component: CodebaseComponent,
+
   }, {
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
