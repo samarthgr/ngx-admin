@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ngx-codebase',
-  template: `
-    <router-outlet></router-outlet>
-  `,
+  templateUrl: './codebase.component.html',
+  styleUrls: ['./codebase.component.scss'],
 })
-export class CodebaseComponent {
+export class CodebaseComponent implements OnInit {
+
+  public codebase = 'flame7';
+
+  constructor() { }
+
+  ngOnInit() {
+  }
 }
