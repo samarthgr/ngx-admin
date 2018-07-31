@@ -28,9 +28,9 @@ import {
   ThemeSettingsComponent,
   SwitcherComponent,
   LayoutDirectionSwitcherComponent,
-  ThemeSwitcherComponent,
+  CBViewSwitcherComponent,
   TinyMCEComponent,
-  ThemeSwitcherListComponent,
+  CBViewswitcherlistComponent,
 } from './components';
 import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
 import {
@@ -65,8 +65,8 @@ const NB_MODULES = [
 const COMPONENTS = [
   SwitcherComponent,
   LayoutDirectionSwitcherComponent,
-  ThemeSwitcherComponent,
-  ThemeSwitcherListComponent,
+  CBViewSwitcherComponent,
+  CBViewswitcherlistComponent,
   HeaderComponent,
   FooterComponent,
   SearchInputComponent,
@@ -79,7 +79,7 @@ const COMPONENTS = [
 ];
 
 const ENTRY_COMPONENTS = [
-  ThemeSwitcherListComponent,
+  CBViewswitcherlistComponent,
 ];
 
 const PIPES = [
