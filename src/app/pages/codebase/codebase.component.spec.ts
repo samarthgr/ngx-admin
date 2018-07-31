@@ -8,7 +8,7 @@ describe('CodebaseComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CodebaseComponent ]
+      declarations: [ CodebaseComponent ],
     })
     .compileComponents();
   }));

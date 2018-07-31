@@ -18,9 +18,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Flame 6',
-        link: '/pages/codebase'
-      }
-    ]
+        link: '/pages/codebase',
+      },
+    ],
   },
   {
     title: 'UI Features',
