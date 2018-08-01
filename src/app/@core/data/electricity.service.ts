@@ -1,4 +1,9 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+const httpOptions = {
+  headers: new HttpHeaders({'Content-Type' : 'application/json' })
+};
 
 @Injectable()
 export class ElectricityService {
@@ -58,11 +63,12 @@ export class ElectricityService {
     },
   ];
 
-  constructor() {
+  constructor(private http:HttpClient) {
   }
 
   // TODO: observables
   getData() {
-    return this.data;
+    // return this.data;
+    return this.http.get('http://10.210.202.164:8000/test');
   }
 }
