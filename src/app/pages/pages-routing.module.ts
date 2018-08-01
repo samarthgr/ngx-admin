@@ -13,8 +13,7 @@ const routes: Routes = [{
     path: 'dashboard',
     component: DashboardComponent,
   }, {
-    path: 'codebase',
-
+    path: 'codebase/:name',
     component: CodebaseComponent,
 
   }, {

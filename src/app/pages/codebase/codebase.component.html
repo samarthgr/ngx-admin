@@ -1,16 +1,9 @@
-<div [ngSwitch]="codebase" >
-  <div *ngSwitchCase="'flame6'">
-    <div>
-      <h2>Card - Weekly Build</h2>
-      <p>
-        This is a Template which contains daily build results of {{ codebase }}
-      </p>
-    </div>
+<div>
+  <h2>Card - Weekly Build</h2>
+  <div [ngSwitch]="codebase" >
+    <div *ngSwitchCase="'flame6'">You have picked Flame 6</div>
+    <div *ngSwitchCase="'flame7'">You have picked Flame 7</div>
+    <div *ngSwitchCase="'flame8'">You have picked Flame 8</div>
+    <div *ngSwitchDefault>Not picked any</div>
   </div>
-  <div *ngSwitchCase="'flame7'">You have picked Flame 7</div>
-  <div *ngSwitchCase="'flame8'">You have picked Flame 8</div>
-  <div *ngSwitchDefault>Not picked any</div>
-  <ng-template *ngSwitchCase="'flame6'">
-
-  </ng-template>
 </div>
