@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
-  headers: new HttpHeaders({'Content-Type' : 'application/json' })
+  headers: new HttpHeaders({'Content-Type' : 'application/json' }),
 };
 
 @Injectable()
 export class ElectricityService {
 
-  private data = [
+  /* private data = [
     {
       title: '2015',
       months: [
@@ -61,14 +61,14 @@ export class ElectricityService {
         { month: 'Dec', delta: '0.52', down: false, kWatts: '776', cost: '95' },
       ],
     },
-  ];
+  ]; */
 
-  constructor(private http:HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
   // TODO: observables
   getData() {
     // return this.data;
-    return this.http.get('http://10.210.202.164:8000/test');
+    return this.http.get('http://10.210.202.164:8000/test', httpOptions);
   }
 }

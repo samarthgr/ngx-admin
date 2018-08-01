@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
+import { throwError } from 'rxjs';
 
 import { ElectricityService } from '../../../@core/data/electricity.service';
 
@@ -23,7 +24,10 @@ export class ElectricityComponent implements OnDestroy {
       data => {
         this.data = data;
       },
-      err => {}
+      err => {
+        console.error('Error saving electric data!');
+        return throwError(err);
+      },
     );
 
     this.themeSubscription = this.themeService.getJsTheme().subscribe(theme => {

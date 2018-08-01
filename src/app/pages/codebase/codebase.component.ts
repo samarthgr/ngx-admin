@@ -8,13 +8,13 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class CodebaseComponent implements OnInit {
 
-  public codebase:String;
+  public codebase: String;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params: Params) => {
       this.codebase = params['name'];
-    })
+    });
   }
 }
