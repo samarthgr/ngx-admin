@@ -21,15 +21,6 @@ export class ElectricityComponent implements OnDestroy {
 
   constructor(private eService: ElectricityService, private themeService: NbThemeService) {
 
-    this.themeSubscription = this.themeService.getJsTheme().subscribe(theme => {
-      this.currentTheme = theme.name;
-    });
-  }
-
-  ngOnInit() {
-
-    // This service method was there in constructor.
-    // I have moved it to ngOnInit - sam
     this.eService.getData().subscribe(
       data => { this.data = data; },
       err => {
@@ -37,6 +28,10 @@ export class ElectricityComponent implements OnDestroy {
         this.errMsg = err;
       },
     );
+
+    this.themeSubscription = this.themeService.getJsTheme().subscribe(theme => {
+      this.currentTheme = theme.name;
+    });
   }
 
   ngOnDestroy() {

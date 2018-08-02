@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { IElectricity } from './electicity';
 import { Observable } from '../../../../node_modules/rxjs';
-import 'rxjs/add/operator/catch'
-import 'rxjs/add/observable/throw'
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 
 
 const httpOptions = {
@@ -74,13 +74,13 @@ export class ElectricityService {
   }
 
   // TODO: observables
-  getData(): Observable<IElectricity[]>{
+  getData(): Observable<IElectricity[]> {
     // return this.data;
     return this.http.get<IElectricity[]>(this._url, httpOptions)
                                   .catch(this.errorHandler);
   }
 
-  errorHandler(error: HttpErrorResponse){
+  errorHandler(error: HttpErrorResponse) {
     return Observable.throw(error.message || 'Server Error');
   }
 }
