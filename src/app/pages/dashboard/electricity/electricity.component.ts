@@ -1,6 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
-import { throwError } from 'rxjs';
 
 import { ElectricityService } from '../../../@core/data/electricity.service';
 
@@ -11,7 +10,8 @@ import { ElectricityService } from '../../../@core/data/electricity.service';
 })
 export class ElectricityComponent implements OnDestroy {
 
-  data: any;
+  public data: Array<any>;
+  public errMsg;
 
   type = 'week';
   types = ['week', 'month', 'year'];
@@ -20,19 +20,23 @@ export class ElectricityComponent implements OnDestroy {
   themeSubscription: any;
 
   constructor(private eService: ElectricityService, private themeService: NbThemeService) {
-    this.eService.getData().subscribe(
-      data => {
-        this.data = data;
-      },
-      err => {
-        console.error('Error saving electric data!');
-        return throwError(err);
-      },
-    );
 
     this.themeSubscription = this.themeService.getJsTheme().subscribe(theme => {
       this.currentTheme = theme.name;
     });
+  }
+
+  ngOnInit() {
+
+    // This service method was there in constructor.
+    // I have moved it to ngOnInit - sam
+    this.eService.getData().subscribe(
+      data => { this.data = data; },
+      err => {
+        console.error('Error saving electric data!' + err);
+        this.errMsg = err;
+      },
+    );
   }
 
   ngOnDestroy() {
