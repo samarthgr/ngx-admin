@@ -8,7 +8,7 @@ describe('Idc1ripComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Idc1ripComponent ]
+      declarations: [ Idc1ripComponent ],
     })
     .compileComponents();
   }));

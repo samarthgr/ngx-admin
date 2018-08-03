@@ -57,7 +57,7 @@ export class CodebaseStatsService {
   }
 
   // TODO: observables
-  //getData(): Observable<IElectricity[]> {
+  // getData(): Observable<IElectricity[]> {
     getData() {
      return this.data;
     /*return this.http.get<IElectricity[]>(this._url, httpOptions)

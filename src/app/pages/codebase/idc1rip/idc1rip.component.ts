@@ -5,7 +5,7 @@ import { CodebaseStatsService } from '../../../@core/data/codebase-stats.service
 @Component({
   selector: 'ngx-idc1rip',
   templateUrl: './idc1rip.component.html',
-  styleUrls: ['./idc1rip.component.scss']
+  styleUrls: ['./idc1rip.component.scss'],
 })
 export class Idc1ripComponent implements OnInit {
 

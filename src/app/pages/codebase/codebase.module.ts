@@ -30,6 +30,6 @@ const components = [
   ],
   providers: [
     CodebaseStatsService,
-  ]
+  ],
 })
 export class CodebaseModule { }
