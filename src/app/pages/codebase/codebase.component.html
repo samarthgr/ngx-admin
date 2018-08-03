@@ -19,15 +19,15 @@
     <nb-card>
       <nb-card-header>TBD</nb-card-header>
       <nb-card-body>
-          <p>To be updated</p>
+          <button class="btn btn-success" (click)="showLargeModal()">Large modal</button>
       </nb-card-body>
     </nb-card>
   </div>
   <div class="col-lg-6">
     <nb-card>
-      <nb-card-header>TBD</nb-card-header>
+      <nb-card-header>IDC 1RIP</nb-card-header>
       <nb-card-body>
-        <p>To Be Updated</p>
+          <ngx-idc1rip></ngx-idc1rip>
       </nb-card-body>
     </nb-card>
   </div>
@@ -59,3 +59,28 @@
       </nb-card>
     </div>
  </div>
+
+
+ <!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

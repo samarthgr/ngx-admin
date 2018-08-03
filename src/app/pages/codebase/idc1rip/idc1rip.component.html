@@ -1,0 +1,44 @@
+<!-- <nb-card size="large">
+  <div class="consumption-table">
+    <div class="stats-month">
+      <div>
+        <span class="month">Jan</span>
+      </div>
+      <div>
+        <span>Build - Pass</span>
+      </div>
+      <div>
+        <span>Install - Pass</span>
+      </div>
+      <div class="results">
+        <b>120</b> tests / <b>140</b>
+      </div>
+    </div>
+  </div>
+</nb-card> -->
+<nb-tabset fullWidth>
+    <!-- <div>
+      <h3>{{ errMsg }}</h3>
+    </div> -->
+    <nb-tab *ngFor="let request of data" [tabTitle]="request.title" [active]="request.active">
+      <div class="stats-product" *ngFor="let product of request.products">
+        <div>
+          <span class="product">{{ product.product }}</span>
+          <!-- <span class="delta" [ngClass]="{ 'down': month.down }">{{ month.delta }}</span> -->
+        </div>
+        <div>
+            <span class="type">{{ product.type }}</span>
+        </div>
+        <div>
+            <span class="build">{{ product.build }}</span>
+        </div>
+        <div>
+            <span class="install">{{ product.install }}</span>
+        </div>
+        <div>
+            <span class="test">{{ product.test }}</span>
+        </div>
+      </div>
+    </nb-tab>
+  </nb-tabset>
+
