@@ -6,6 +6,9 @@
     </div>
 
     <nb-tabset fullWidth>
+      <div>
+        <h3>{{ errMsg }}</h3>
+      </div>
       <nb-tab *ngFor="let year of data" [tabTitle]="year.title" [active]="year.active">
         <div class="stats-month" *ngFor="let month of year.months">
           <div>

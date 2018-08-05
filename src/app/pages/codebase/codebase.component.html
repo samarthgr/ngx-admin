@@ -1,16 +1,86 @@
-<div [ngSwitch]="codebase" >
-  <div *ngSwitchCase="'flame6'">
-    <div>
-      <h2>Card - Weekly Build</h2>
-      <p>
-        This is a Template which contains daily build results of {{ codebase }}
-      </p>
-    </div>
+<div class="row">
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>Recurring requests</nb-card-header>
+      <nb-card-body>
+        <div>
+          <h2>Card - Weekly Build</h2>
+          <div [ngSwitch]="codebase" >
+            <div *ngSwitchCase="'flame6'">You have picked Flame 6</div>
+            <div *ngSwitchCase="'flame7'">You have picked Flame 7</div>
+            <div *ngSwitchCase="'flame8'">You have picked Flame 8</div>
+            <div *ngSwitchDefault>Not picked any</div>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
   </div>
-  <div *ngSwitchCase="'flame7'">You have picked Flame 7</div>
-  <div *ngSwitchCase="'flame8'">You have picked Flame 8</div>
-  <div *ngSwitchDefault>Not picked any</div>
-  <ng-template *ngSwitchCase="'flame6'">
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>TBD</nb-card-header>
+      <nb-card-body>
+          <button class="btn btn-success" (click)="showLargeModal()">Large modal</button>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>IDC 1RIP</nb-card-header>
+      <nb-card-body>
+          <ngx-idc1rip></ngx-idc1rip>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>TBD</nb-card-header>
+      <nb-card-body>
+        <p>To Be Updated</p>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>TBD</nb-card-header>
+      <nb-card-body>
+        <p>To Be Updated</p>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
 
-  </ng-template>
+<div class="row">
+    <div class="col-lg-6">
+      <nb-card>
+        <nb-card-header>Pie</nb-card-header>
+        <nb-card-body>
+          <ngx-echarts-pie></ngx-echarts-pie>
+        </nb-card-body>
+      </nb-card>
+    </div>
+ </div>
+
+
+ <!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
 </div>

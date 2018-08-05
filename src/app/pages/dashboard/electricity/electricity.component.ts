@@ -10,7 +10,8 @@ import { ElectricityService } from '../../../@core/data/electricity.service';
 })
 export class ElectricityComponent implements OnDestroy {
 
-  data: Array<any>;
+  public data: Array<any>;
+  public errMsg;
 
   type = 'week';
   types = ['week', 'month', 'year'];
@@ -19,7 +20,14 @@ export class ElectricityComponent implements OnDestroy {
   themeSubscription: any;
 
   constructor(private eService: ElectricityService, private themeService: NbThemeService) {
-    this.data = this.eService.getData();
+
+    this.eService.getData().subscribe(
+      data => { this.data = data; },
+      err => {
+        console.error('Error saving electric data!' + err);
+        this.errMsg = err;
+      },
+    );
 
     this.themeSubscription = this.themeService.getJsTheme().subscribe(theme => {
       this.currentTheme = theme.name;

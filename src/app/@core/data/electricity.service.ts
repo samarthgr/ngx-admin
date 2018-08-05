@@ -1,9 +1,21 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { IElectricity } from './electicity';
+import { Observable } from '../../../../node_modules/rxjs';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
+
+
+const httpOptions = {
+  headers: new HttpHeaders({'Content-Type' : 'application/json' }),
+};
 
 @Injectable()
 export class ElectricityService {
 
-  private data = [
+  private _url: string = 'http://10.210.202.164:8000/test';
+
+  /* private data = [
     {
       title: '2015',
       months: [
@@ -56,13 +68,19 @@ export class ElectricityService {
         { month: 'Dec', delta: '0.52', down: false, kWatts: '776', cost: '95' },
       ],
     },
-  ];
+  ]; */
 
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
   // TODO: observables
-  getData() {
-    return this.data;
+  getData(): Observable<IElectricity[]> {
+    // return this.data;
+    return this.http.get<IElectricity[]>(this._url, httpOptions)
+                                  .catch(this.errorHandler);
+  }
+
+  errorHandler(error: HttpErrorResponse) {
+    return Observable.throw(error.message || 'Server Error');
   }
 }
